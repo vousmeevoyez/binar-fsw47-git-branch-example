@@ -1,4 +1,11 @@
 {
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "prompt.js",
+  "scripts": {
+    "start": "node prompt.js"
+  },
   "dependencies": {
     "readline-sync": "^1.4.10"
   }

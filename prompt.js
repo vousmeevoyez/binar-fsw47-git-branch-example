@@ -39,14 +39,12 @@
 // // Run the main function
 // main();
 
-const readlineSync = require("readline-sync");
+import readlineSync from "readline-sync";
 
-// Wait for user's response.
-const userName = readlineSync.question("May I have your name? ");
-console.log("Hi " + userName + "!");
+const age = readlineSync.question("How old are you? ");
 
-// Handle the secret text (e.g. password).
-const favFood = readlineSync.question("What is your favorite food? ", {
-  hideEchoBack: true, // The typed text on screen is hidden by `*` (default).
-});
-console.log("Oh, " + userName + " loves " + favFood + "!");
+if (age > 18) {
+  console.log("Your age can be next");
+} else {
+  console.log("Sorry, you are a child");
+}
