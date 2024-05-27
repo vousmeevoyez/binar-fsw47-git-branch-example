@@ -23,3 +23,5 @@ if (isNaN(lantaiLevel) || lantaiLevel < 1 || lantaiLevel > 100) {
     i++;
   }
 }
+
+// w3school
