@@ -27,3 +27,10 @@ const test2 = function () {
 };
 
 test2();
+
+//error arrow function code
+// test(1);
+
+// const test = (a, b) => {
+//   console.log(b);
+// };
