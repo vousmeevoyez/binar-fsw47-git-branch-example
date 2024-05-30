@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contoh penggunaan Object</title>
+</head>
+<body>
+    <h1>Display object with assign & For IN</h1>
+    <div id="objectOutput"></div> <!-- Container to display the object -->
+    <h1>Display object with construct</h1>
+    <div id="objectOutput2"></div> <!-- Container to display the object -->
+    <h1>Display object with constructor function</h1>
+    <div id="objectOutput3"></div> <!-- Container to display the object -->
+    <h1>Display object with es6 class</h1>
+    <div id="objectOutput4"></div> <!-- Container to display the object -->
+
+</body>
+<script>
+    // using Object assign & for in
+
+    const object = {
+        nama: "kelvin D", 
+        usia: 30,
+        jenisKelamin: "laki-laki",
+    } ;
+
+    // Create a string with all array elements in a list format
+    let content = '<ul>';
+    for (const key in object) {
+        content += `<li> ${key}: ${object[key]}</li>`; // Add each item as a list item
+    }
+    content += '</ul>';
+
+    const outputDiv = document.getElementById('objectOutput');
+    outputDiv.innerHTML = content;
+
+    // using Object construct & for of
+
+    const object2 = new Object();
+    object2.nama = 'Kelvin S';
+    object2.usia = 31;
+    object2.jenisKelamin = 'laki 2';
+
+    const outputDiv2 = document.getElementById('objectOutput2');
+
+    let content2 = '<ul>';
+    for(const [key, value] of Object.entries(object2)) {
+        content2 += `<li> ${key}: ${value}</li>`; // Add each item as a list item
+    }
+    content2 += '</ul>';
+
+    outputDiv2.innerHTML = content2;
+
+    // using constructor function & for each
+
+    function ProfilKaryawan(namaAnda, usiaAnda, jumlahTahunPengalamanAnda){
+        (this.nama = namaAnda), (this.usia = usiaAnda), (this.pengalaman = jumlahTahunPengalamanAnda);
+    }
+    const karyawan = new ProfilKaryawan('Kelvin A', 30, 10);
+
+    const outputDiv3 = document.getElementById('objectOutput3');
+
+    let content3 = '<ul>';
+    Object.keys(karyawan).forEach((key)=> {
+        content3 += `<li>${key}: ${karyawan[key]}</li>`;
+    })
+    content3 += '</ul>';
+
+    outputDiv3.innerHTML = content3;
+
+    // using es6 class
+
+    class Karyawan{
+        constructor(namaAnda, usiaAnda, jumlahTahunPengalamanAnda){
+            this.nama = namaAnda;
+            this.usia = usiaAnda;
+            this.jumlahTahunPengalaman = jumlahTahunPengalamanAnda;
+        }
+    }
+    const karyawan2 = new Karyawan('Kelvin B', 30, 10);
+
+    const outputDiv4 = document.getElementById('objectOutput4');
+    outputDiv4.innerHTML = `nama: ${karyawan2.nama}, usia: ${karyawan2.usia}`;
+
+</script>
+</html>
