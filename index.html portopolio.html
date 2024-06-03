@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .profile-img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .skills-list, .projects-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .skill, .project {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: calc(50% - 40px);
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
+        }
+        .contact-form label {
+            display: block;
+            margin-top: 10px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://placehold.co/600x400" alt="Profile Photo" class="profile-img">
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="section">
+            <h2>Introduction</h2>
+            <p>Hello, I'm [Your Name], currently studying [Your Major] at [Your School]. This portfolio showcases my academic projects, skills, and interests.</p>
+        </section>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I am passionate about [Your Interests]. I have gained substantial knowledge in [Relevant Fields] and am eager to apply this in practical settings.</p>
+            <div class="skills-list">
+                <div class="skill">HTML & CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">React</div>
+                <div class="skill">Python</div>
+            </div>
+        </section>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <h3>Project Name 1</h3>
+                    <p>Short description of the project goes here. Highlight the main functionalities and the technologies used.</p>
+                </div>
+                <div class="project">
+                    <h3>Project Name 2</h3>
+                    <p>Short description of the project goes here. Highlight the main functionalities and the technologies used.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright © 2024. All rights reserved.</p>
+    </footer>
+</body>
+</html>
